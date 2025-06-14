@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Agency | Creative Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #222; }
+        .top-bar {
+            background: #ffb300;
+            color: #222;
+            text-align: center;
+            padding: 8px 0;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+        header {
+            background: #1a237e;
+            color: #fff;
+            padding: 28px 0 16px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: #ffb300; }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px 60px 20px;
+            background: linear-gradient(120deg, #3949ab 0%, #00bcd4 100%);
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .hero .cta-btn {
+            background: #ffb300;
+            color: #222;
+            border: none;
+            padding: 14px 36px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s;
+        }
+        .hero .cta-btn:hover { background: #ffa000; }
+        .services, .portfolio, .contact {
+            max-width: 1000px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(26,35,126,0.07);
+            padding: 38px 28px;
+        }
+        .services h2, .portfolio h2, .contact h2 { margin-top: 0; text-align: center; }
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 28px;
+        }
+        .service-card {
+            background: #e3f2fd;
+            color: #1a237e;
+            padding: 28px 22px;
+            border-radius: 14px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            flex: 1 1 220px;
+            min-width: 200px;
+            max-width: 300px;
+            box-shadow: 0 1px 6px rgba(26,35,126,0.06);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(40px) scale(0.96);
+            animation: fadeInUp 0.7s forwards;
+        }
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.3s; }
+        .service-card:nth-child(3) { animation-delay: 0.5s; }
+        .portfolio-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 28px;
+            justify-content: center;
+        }
+        .portfolio-card {
+            background: #fffde7;
+            border-radius: 10px;
+            box-shadow: 0 1px 6px rgba(255,193,7,0.08);
+            padding: 22px 18px;
+            flex: 1 1 250px;
+            min-width: 220px;
+            max-width: 320px;
+            opacity: 0;
+            transform: translateY(40px) scale(0.96);
+            animation: fadeInUp 0.7s forwards;
+        }
+        .portfolio-card:nth-child(1) { animation-delay: 0.2s; }
+        .portfolio-card:nth-child(2) { animation-delay: 0.4s; }
+        .portfolio-card:nth-child(3) { animation-delay: 0.6s; }
+        .portfolio-card h3 { margin-top: 0; }
+        .portfolio-card a {
+            color: #ffb300;
+            text-decoration: underline;
+            font-size: 1rem;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 22px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact input, .contact textarea {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+            font-size: 1rem;
+        }
+        .contact button {
+            background: #1a237e;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .contact button:hover { background: #3949ab; }
+        footer {
+            background: #1a237e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 48px;
+            font-size: 1rem;
+        }
+        @media (max-width: 900px) {
+            .services-list, .portfolio-items { flex-direction: column; }
+            .service-card, .portfolio-card { max-width: 100%; }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .footer-social a {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+            vertical-align: middle;
+        }
+        .footer-social a:hover {
+            transform: translateY(-8px) scale(1.15);
+            box-shadow: 0 8px 24px rgba(255,179,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        www.brightpixel.com
+    </div>
+    <header>
+        <h1>BrightPixel Digital Agency</h1>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <button onclick="location.href='#contact'" style="background:#ffb300;color:#222;border:none;padding:8px 22px;border-radius:20px;font-weight:600;margin-left:18px;cursor:pointer;transition:background 0.2s;">Contact Me</button>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
+        <h1>We Grow Your Digital Presence</h1>
+        <p>
+            BrightPixel is a creative digital agency helping brands stand out online. We design, develop, and market digital experiences that drive results.
+        </p>
+        <a href="#contact"><button class="cta-btn">Let's Work Together</button></a>
+    </section>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-list">
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Modern, responsive, and user-focused website design to elevate your brand.</p>
+            </div>
+            <div class="service-card">
+                <h3>Development</h3>
+                <p>Robust web & app development using the latest technologies for your business needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Marketing</h3>
+                <p>SEO, social media, and digital campaigns to grow your audience and reach.</p>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2>Our Work</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-card">
+                <h3>Startup Landing Page</h3>
+                <p>Designed and developed a high-converting landing page for a tech startup.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>E-commerce Platform</h3>
+                <p>Built a scalable online store with seamless checkout and analytics integration.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>Brand Campaign</h3>
+                <p>Executed a digital marketing campaign that increased brand engagement by 200%.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+            <label for="file-upload">Upload File (PDF, DOC, etc.):</label>
+            <input type="file" id="file-upload" name="file" accept=".pdf,.doc,.docx,.txt">
+            <label for="image-upload">Upload Image (JPG, PNG):</label>
+            <input type="file" id="image-upload" name="image" accept="image/png, image/jpeg">
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <div style="max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:24px 16px 0 16px;">
+            <div style="flex:1 1 220px;">
+                <h3 style="margin:0 0 8px 0;font-size:1.2rem;">BrightPixel Digital Agency</h3>
+                <p style="margin:0;color:#b3b8d0;font-size:0.98rem;">Creative solutions for your digital growth.</p>
+            </div>
+            <div style="flex:1 1 120px;text-align:center;">
+                <a href="#hero" style="color:#ffb300;text-decoration:none;margin:0 10px;font-weight:500;">Home</a>
+                <a href="#services" style="color:#ffb300;text-decoration:none;margin:0 10px;font-weight:500;">Services</a>
+                <a href="#portfolio" style="color:#ffb300;text-decoration:none;margin:0 10px;font-weight:500;">Portfolio</a>
+                <a href="#contact" style="color:#ffb300;text-decoration:none;margin:0 10px;font-weight:500;">Contact</a>
+            </div>
+            <div style="flex:1 1 180px;text-align:right;">
+                <span class="footer-social" style="color:#b3b8d0;font-size:1.2rem;margin-right:8px;">
+                    <a href="#" style="color:#ffb300;text-decoration:none;margin:0 6px;" title="Twitter">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.916 4.916 0 0 0 16.616 3c-2.72 0-4.924 2.206-4.924 4.924 0 .386.044.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.724-.666 1.562-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/></svg>
+                    </a>
+                    <a href="#" style="color:#ffb300;text-decoration:none;margin:0 6px;" title="LinkedIn">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+                    </a>
+                    <a href="#" style="color:#ffb300;text-decoration:none;margin:0 6px;" title="Facebook">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.326v21.348c0 .733.592 1.326 1.325 1.326h11.495v-9.294h-3.124v-3.622h3.124v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12v9.294h6.116c.73 0 1.323-.593 1.323-1.326v-21.349c0-.734-.593-1.326-1.326-1.326z"/></svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div style="text-align:center;color:#b3b8d0;font-size:0.98rem;padding:18px 0 0 0;margin-top:18px;border-top:1px solid #2c3570;">
+            &copy; 2025 BrightPixel Digital Agency. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

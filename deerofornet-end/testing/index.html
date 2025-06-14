@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            padding: 20px 0;
+            background-color: wheat;
+        }
+        .logo{
+            font-size: 30px;
+        }
+        .menu ul{
+            display: flex;
+            list-style: none;
+        }
+        .menu ul li{
+            margin: 0 10px;
+        }
+        .btn{
+            background-color: red;
+            padding: 10px 40px;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .btn:hover{
+            background-color: darkred;
+            cursor: pointer;
+        }
+        .herosection{
+            text-align: center;
+            padding: 50px 0;
+            background-color: rgb(2, 186, 223);
+            line-height: 0px;
+        }
+        .herosection h1{
+            font-size: 100px;
+        }
+        .herosection p{
+            font-size: 30px;
+        }
+        .herosection h1{
+            font-size: 50px;
+        }
+        .herosection p{
+            font-size: 20px;
+        }
+        .cards{
+            display: inline;
+            justify-content: space-between;
+            margin: 0 20px;
+            padding: 20px 0;
+            background-color: wheat;
+        }
+        /* i want to be styling all card dev with responsive and animation */
+        .Allcards{
+            display: inline-flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            padding: 20px 0;
+            background-color: wheat;
+            gap: 10px;
+        }
+        .card1{
+            background-color: rgb(2, 186, 223);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card2{
+            background-color: rgb(2, 186, 223);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card3{
+            background-color: rgb(2, 186, 223);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card1:hover{
+            transform: scale(1.1);
+        }
+        .card2:hover{
+            transform: scale(1.1);
+        }
+        .card3:hover{
+            transform: scale(1.1);
+        }
+        /* the image card is more width and height */
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+            
+        
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">my logo</div>
+        <div class="menu">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+                <li>service</li>
+                <li>blog</li>
+                <li>portfolio</li>
+            </ul>
+        </div>
+        <div class="btn">contact us</div>
+    </div>
+    <div class="herosection">
+        <h1>welcome to my website </h1>
+        <br>
+        <p>this is my first website using html and css</p>
+    </div>
+    <div class="cards">
+        <div class="card">card1
+            <img src="profile.jpg" alt="card image">
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quos.</p>
+            <button>read more</button>
+        </div>
+        <!-- i want to make card with responsive -->
+         <div class="Allcards">
+            <div class="card1">
+                <img src="profile.jpg" alt="card image">
+                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quos.</p>
+                <button>read more</button>
+            </div>
+            <div class="card2">
+                <img src="profile.jpg" alt="card image">
+                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quos.</p>
+                <button>read more</button>
+            </div>
+            <div class="card3">
+                <img src="profile.jpg" alt="card image">
+                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quos.</p>
+                <button>read more</button>  
+            </div>
+         </div>
+        
+    
+</body>
+</html>
