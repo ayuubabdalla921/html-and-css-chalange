@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 15px;}
+            .logo{
+                font-size: 18px;
+
+            }
+            .menu{
+                display: flex;
+                gap: 20px;
+                
+                
+            }
+            .menu a{
+                text-decoration: none;
+                color: black;
+                font-size: 18px; }
+            .btn{
+                background-color: blue;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+        .btn:hover{
+           background-color: rgb(25, 25, 147);
+           color: white;
+        }
+        /* make button with shrink animation */
+        .btn:active{
+            transform: scale(0.5);
+
+        }
+        .btn2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .btn2 button{
+            background-color: rgb(208, 32, 16);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+        }
+        .btn2 button:hover{
+           background-color: rgb(25, 25, 147);
+           color: white;
+        }
+        .btn2 button:active{
+            transform: scale(0.5);
+
+        }
+        .hero-section{
+           background-color: blue;
+           height: 80vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+        }
+        .hero-section h1{
+            color: white;
+            font-size: 40px;
+            margin-top: 20px;             
+        
+        }
+        .Aboutus{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            gap: 50px;
+        }
+        .Aboutus .img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .Aboutus .img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .Aboutus .qoral{
+            width: 500px;
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            gap: 50px;
+        }
+        .cards .card1{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cards .card1 img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .cards .card1 h1{
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;}
+        .cards .card1 p{
+            color: white;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .cards .card2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cards .card2 img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .cards .card2 h1{
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;}
+        .cards .card2 p{
+            color: white;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .cards .card3{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cards .card3 img{
+            width: 100px;
+            height: 100px;}
+        .cards .card3 h1{
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;}
+        .cards .card3 p{
+            color: white;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        
+        .footer{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 90px;
+        }
+        .footer h1{
+            font-size: 18px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo" style="color:blue;">
+          <h3>Ayuub Abdullahi </h3>  
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Blog</a>
+            <a href="#">Contatc us</a>
+ </div>
+     <div class="btn">
+        Sign up
+     </div>
+    </div>
+    <div class="hero-section">
+        <div class="content">
+            <p style="text-align: center; color: white;">Ayuub Abdullahi </p>
+            <h1 style="text-align: center;">waxaan ahay web desginer<br>iyo ui ux desginer</h1>
+        </div>
+        <div class="btn2">
+            <button>Contact us</button>
+        </div>
+    </div>
+    </div>
+   
+     </div>
+    </div>
+    <!-- About us -->
+     <div class="Aboutus">
+        <div class="img">
+        <img src="/chalange one/profile-removebg-preview.png" alt="">
+     </div>
+     <div class="qoral">
+        <h1>About us</h1>
+        <p>My name is Ayuub Abdullahi, I am a web designer and UI/UX designer. I have been working in this field for over 5 years and have a lot of experience in designing websites and mobile applications. I am passionate about creating beautiful and user-friendly interfaces that provide a great user experience. I am always looking for new and innovative ways to improve my skills and stay up-to-date with the latest trends in web design and development.</p>
+     </div>
+
+     </div>
+     <!-- cardlist -->
+      <div class="cards">
+        <div class="card1">
+            <img src="/chalange one/profile-removebg-preview.png" alt="">
+            <h1>Card 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        </div>
+        <div class="card2">
+            <img src="/chalange one/profile-removebg-preview.png" alt="">
+            <h1>Card 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        </div>
+        <div class="card3">
+            <img src="/chalange one/profile-removebg-preview.png" alt="">
+            <h1>Card 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        </div>
+      </div>
+      
+     <!-- footer -->
+     <div class="footer">
+        <h1>copy right all right reseved Ayuub Abdullahi 2025</h1>
+     </div>
+     
+</body>
+</html>
